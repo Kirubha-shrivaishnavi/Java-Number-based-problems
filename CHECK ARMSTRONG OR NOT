@@ -1,0 +1,24 @@
+CHECK ARMSTRONG OR NOT
+
+import java.util.*;
+public class Main{
+    public static void main(String []args){
+        Scanner sc=new Scanner(System.in);
+        int num = sc.nextInt();
+        int sum = 0;
+        int y = 0;int x = num;
+        int count = 0;
+        while(x!=0){
+            y = x%10;
+            x = x/10;
+            count++;
+        }
+        x = num;
+        while(x!=0){
+            y = x%10;
+            x = x/10;
+            sum = sum+(int)(Math.pow(y,count));
+        }
+        System.out.println((sum == num)?"Armstrong":"not Armstrong");
+    }
+}
